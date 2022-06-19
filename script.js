@@ -1,6 +1,6 @@
 let option = ['Rock', 'Paper', 'Scissors'];
 
-let playerSelect = 'Paper';
+let playerSelect = 'Scissors';
 let computerSelection = computerPlay(option);
 
 function computerPlay(c) {
@@ -20,16 +20,16 @@ function comparison(ps, cs) {
     if (ps === 'Paper') {
       if (cs == 'Scissors') {
         return `Lose ${cs} beats ${ps}`;
+      } else {
+        return 'Wine';
       }
-    } else {
-      return 'Wine';
     }
     if (ps === 'Scissors') {
       if (cs == 'Rock') {
         return `Lose ${cs} beats ${ps}`;
+      } else {
+        return 'Wine';
       }
-    } else {
-      return 'Wine';
     }
   } else {
     return 'Drow';
