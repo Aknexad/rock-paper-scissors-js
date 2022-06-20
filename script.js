@@ -1,4 +1,3 @@
-// let playerSelect = prompt('chose');
 let player = 0;
 let computer = 0;
 
@@ -14,34 +13,34 @@ function comparison(ps, cs) {
       if (cs == 'Paper') {
         return `Lose ${cs} beats ${ps}`;
       } else {
-        return 'Wine';
+        return 'Winner';
       }
     }
     if (ps === 'Paper') {
       if (cs == 'Scissors') {
         return `Lose ${cs} beats ${ps}`;
       } else {
-        return 'Wine';
+        return 'Winner';
       }
     }
     if (ps === 'Scissors') {
       if (cs == 'Rock') {
         return `Lose ${cs} beats ${ps}`;
       } else {
-        return 'Wine';
+        return 'Winner';
       }
     }
   } else {
-    return 'Drow';
+    return 'Equal';
   }
 }
 
 function Game(result) {
-  if (result !== 'Drow') {
-    if (result === 'Wine') {
+  if (result !== 'Equal') {
+    if (result === 'Winner') {
       player++;
     } else {
-      computer = computer + 1;
+      computer++;
     }
   }
 
@@ -65,7 +64,7 @@ function Score(player, computer) {
 }
 
 for (let i = 0; i < 5; i++) {
-  let playerSelect = 'Paper';
+  let playerSelect = prompt('chose');
   Game(comparison(playerSelect, computerPlay()));
   console.log('//////////////');
 }
