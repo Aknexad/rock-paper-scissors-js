@@ -1,11 +1,11 @@
-let option = ['Rock', 'Paper', 'Scissors'];
+// let playerSelect = prompt('chose');
+let player = 0;
+let computer = 0;
 
-let playerSelect = 'Scissors';
-let computerSelection = computerPlay(option);
+function computerPlay() {
+  const option = ['Rock', 'Paper', 'Scissors'];
 
-function computerPlay(c) {
-  let randumNumber = Math.floor(Math.random() * 3);
-  return c[randumNumber];
+  return option[Math.floor(Math.random() * 3)];
 }
 
 function comparison(ps, cs) {
@@ -36,8 +36,38 @@ function comparison(ps, cs) {
   }
 }
 
-console.log(`player  ${playerSelect}`);
-console.log(`computer ${computerSelection}`);
-console.log(
-  `reult ${comparison(playerSelect, computerSelection)}`
-);
+function Game(result) {
+  if (result !== 'Drow') {
+    if (result === 'Wine') {
+      player++;
+    } else {
+      computer = computer + 1;
+    }
+  }
+
+  console.log(result);
+  console.log(`Computer ${computer}`);
+  console.log(`Player ${player}`);
+}
+
+function Score(player, computer) {
+  if (player > computer) {
+    console.log(`Your Score ${player}`);
+    console.log(`Coputer Score ${computer}`);
+    console.log('You Win the Game ');
+  } else if (computer > player) {
+    console.log(`Your Score ${player}`);
+    console.log(`Coputer Score ${computer}`);
+    console.log('You Lose the Game ');
+  } else {
+    console.log('play agen ');
+  }
+}
+
+for (let i = 0; i < 5; i++) {
+  let playerSelect = 'Paper';
+  Game(comparison(playerSelect, computerPlay()));
+  console.log('//////////////');
+}
+
+Score(player, computer);
