@@ -63,10 +63,20 @@ function Score(player, computer) {
   }
 }
 
-for (let i = 0; i < 5; i++) {
-  let playerSelect = prompt('chose');
-  Game(comparison(playerSelect, computerPlay()));
-  console.log('//////////////');
-}
+let btn = document.querySelectorAll('button');
+
+btn.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    let = playerSelect = e.target.innerHTML;
+
+    Game(comparison(playerSelect, computerPlay()));
+  });
+});
+
+// for (let i = 0; i < 5; i++) {
+//   let playerSelect = '';
+//   Game(comparison(playerSelect, computerPlay()));
+//   console.log('//////////////');
+// }
 
 Score(player, computer);
