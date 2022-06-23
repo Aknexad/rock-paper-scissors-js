@@ -1,6 +1,3 @@
-let player = 0;
-let computer = 0;
-
 function computerPlay() {
   const option = ['Rock', 'Paper', 'Scissors'];
 
@@ -35,6 +32,9 @@ function comparison(ps, cs) {
   }
 }
 
+let player = 0;
+let computer = 0;
+
 function Game(result) {
   if (result !== 'Equal') {
     if (result === 'Winner') {
@@ -44,6 +44,9 @@ function Game(result) {
     }
   }
 
+  document.querySelector('#player').innerText = player;
+  document.querySelector('#computer').innerText = computer;
+  document.querySelector('h3').innerText = result;
   console.log(result);
   console.log(`Computer ${computer}`);
   console.log(`Player ${player}`);
@@ -54,9 +57,13 @@ function Score(player, computer) {
     console.log(`Your Score ${player}`);
     console.log(`Coputer Score ${computer}`);
     console.log('You Win the Game ');
+    document.querySelector('h2').innerText =
+      'You Win the Game';
   } else if (computer > player) {
     console.log(`Your Score ${player}`);
     console.log(`Coputer Score ${computer}`);
+    document.querySelector('h2').innerText =
+      'You Lose the Game';
     console.log('You Lose the Game ');
   } else {
     console.log('play agen ');
@@ -68,8 +75,8 @@ let btn = document.querySelectorAll('button');
 btn.forEach((item) => {
   item.addEventListener('click', (e) => {
     let = playerSelect = e.target.innerHTML;
-
     Game(comparison(playerSelect, computerPlay()));
+    Score(player, computer);
   });
 });
 
@@ -78,5 +85,3 @@ btn.forEach((item) => {
 //   Game(comparison(playerSelect, computerPlay()));
 //   console.log('//////////////');
 // }
-
-Score(player, computer);
