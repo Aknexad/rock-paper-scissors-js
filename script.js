@@ -56,7 +56,7 @@ function Score(player, computer) {
     document.querySelector('h2').innerText =
       'You Lose the Game';
   } else {
-    console.log('play agen ');
+    document.querySelector('h2').innerText = 'Equl';
   }
 }
 
