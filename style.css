@@ -1,3 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: brown;
+  margin: 20px;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn button {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  font-size: 2rem;
+  width: 20vw;
+  height: auto;
+}
+
+.btn button:hover {
+  background: black;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30vw;
+  height: auto;
+}
+
+.part-1,
+.part-2,
+.part-3,
+.part-4 {
+  display: flex;
+  gap: 25px;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  padding-top: 15px;
+}
+
+.part-4 {
+  font-size: 2rem;
 }
