@@ -72,13 +72,31 @@ function Score(player, computer) {
 
 let btn = document.querySelectorAll('button');
 
+let gameRound = 0;
 btn.forEach((item) => {
   item.addEventListener('click', (e) => {
-    let = playerSelect = e.target.innerHTML;
-    Game(comparison(playerSelect, computerPlay()));
-    Score(player, computer);
+    gameRound++;
+    if (gameRound <= 4) {
+      let = playerSelect = e.target.innerHTML;
+      Game(comparison(playerSelect, computerPlay()));
+    } else {
+      Score(player, computer);
+    }
+
+    console.log(`gameRound ${gameRound}`);
   });
 });
+
+// let gameRound = 0;
+// while (gameRound <= 5) {
+//   btn.forEach((item) => {
+//     item.addEventListener('click', (e) => {
+//       let = playerSelect = e.target.innerHTML;
+//       Game(comparison(playerSelect, computerPlay()));
+//       gameRound++;
+//     });
+//   });
+// }
 
 // for (let i = 0; i < 5; i++) {
 //   let playerSelect = '';
