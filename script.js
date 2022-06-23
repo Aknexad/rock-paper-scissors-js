@@ -1,6 +1,5 @@
 function computerPlay() {
   const option = ['Rock', 'Paper', 'Scissors'];
-
   return option[Math.floor(Math.random() * 3)];
 }
 
@@ -46,7 +45,7 @@ function Game(result) {
 
   document.querySelector('#player').innerText = player;
   document.querySelector('#computer').innerText = computer;
-  document.querySelector('h3').innerText = result;
+  document.querySelector('#round').innerText = result;
 }
 
 function Score(player, computer) {
