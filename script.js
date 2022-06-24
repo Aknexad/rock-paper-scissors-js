@@ -60,7 +60,7 @@ function Score(player, computer) {
   }
 }
 
-let btn = document.querySelectorAll('button');
+let btn = document.querySelectorAll('.rps');
 
 let gameRound = 0;
 btn.forEach((item) => {
@@ -73,4 +73,14 @@ btn.forEach((item) => {
       Score(player, computer);
     }
   });
+});
+
+const reset = document.querySelector('.reset');
+
+reset.addEventListener('click', () => {
+  gameRound = 0;
+  document.querySelector('#player').innerText = 0;
+  document.querySelector('#computer').innerText = 0;
+  document.querySelector('#round').innerText = ' ';
+  document.querySelector('h2').innerText = '';
 });

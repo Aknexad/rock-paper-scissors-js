@@ -69,3 +69,14 @@ p {
 .part-4 {
   font-size: 2rem;
 }
+
+.reset {
+  background-color: green;
+  padding: 10px 30px;
+  color: white;
+  font-size: 2rem;
+}
+
+.reset:hover {
+  background-color: black;
+}
