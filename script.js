@@ -78,6 +78,10 @@ btn.forEach((item) => {
 const reset = document.querySelector('.reset');
 
 reset.addEventListener('click', () => {
+
+   player = 0;
+   computer = 0;
+  
   gameRound = 0;
   document.querySelector('#player').innerText = 0;
   document.querySelector('#computer').innerText = 0;
